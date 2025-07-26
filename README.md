@@ -16,6 +16,19 @@ A modern, full-stack web application for managing a Formula 1 fantasy league. Th
 - Clean, maintainable codebase
 - Ready for further expansion (fantasy teams, leagues, scoring, etc.)
 
+## Progress
+- Project initialized with Ruby on Rails 8 and Ruby 3.4
+- F1-themed animated homepage with top-view cars and custom CSS
+- User authentication (login/signup) with Devise
+- Unique username field with validation and downcasing
+- Professional directory structure: separated frontend (CSS) and backend (Rails)
+- Navbar with conditional links (login, signup, logout, user bubble)
+- Flash notifications as floating bubbles, styled and positioned for UX
+- Signup and login pages fully themed to match F1 branding
+- All major errors and server issues resolved (see commit history for details)
+- Project pushed to GitHub with comprehensive README
+- **NEW**: Fantasy Team page shell created with F1-themed styling and navbar link
+
 ## Getting Started
 1. Clone the repository
 2. Install Ruby, Rails, and dependencies (`bundle install` in the backend directory)
