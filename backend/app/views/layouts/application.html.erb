@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>F1 Fantasy League - Experience the Thrill of Formula 1 Racing</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
+    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/icon.png">
+
+    <%# External CSS file %>
+    <link rel="stylesheet" href="/frontend/css/main.css">
+
+    <%# Includes all stylesheet files in app/assets/stylesheets %>
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="/" class="navbar-brand">F1 Fantasy League</a>
+        <div class="navbar-links">
+          <% if user_signed_in? %>
+            <span class="user-bubble"><%= current_user.username.titleize %></span>
+            <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-secondary', form: { style: 'display:inline' } %>
+          <% else %>
+            <a href="/users/sign_in" class="user-bubble">Login</a>
+            <a href="/users/sign_up" class="user-bubble">Sign Up</a>
+          <% end %>
+        </div>
+      </div>
+    </nav>
+    <!-- Flash Notifications -->
+    <div id="flash-container">
+      <% flash.each do |type, message| %>
+        <div class="flash-message <%= type %>"><%= message %></div>
+      <% end %>
+    </div>
+    <%= yield %>
+
+    <style>
+      .navbar {
+        width: 100%;
+        background: #1a1a1a;
+        color: #fff;
+        padding: 0.5rem 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+      .navbar-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 24px;
+      }
+      .navbar-brand {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #e10600;
+        text-decoration: none;
+        letter-spacing: 1px;
+      }
+      .navbar-links a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 1.5rem;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      .navbar-links a:hover {
+        color: #e10600;
+      }
+      .user-bubble {
+        display: inline-block;
+        background: linear-gradient(90deg, #1a1a1a 0%, #2d2d2d 100%);
+        color: #fff;
+        border-radius: 25px;
+        padding: 8px 18px;
+        margin-right: 1rem;
+        font-weight: 600;
+        font-size: 1rem;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        border: 2px solid #e10600;
+        vertical-align: middle;
+        letter-spacing: 0.5px;
+      }
+      @media (max-width: 600px) {
+        .navbar-container {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .navbar-links {
+          margin-top: 0.5rem;
+        }
+        .navbar-links a {
+          margin-left: 0;
+          margin-right: 1rem;
+        }
+      }
+      #flash-container {
+        position: fixed;
+        top: 80px;
+        right: 32px;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        min-width: 250px;
+      }
+      .flash-message {
+        background: linear-gradient(90deg, #e10600 0%, #ff4444 100%);
+        color: #fff;
+        padding: 1rem 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        font-weight: 600;
+        opacity: 0.97;
+        animation: flash-in 0.5s cubic-bezier(0.4,0,0.2,1);
+        min-width: 220px;
+        max-width: 350px;
+        word-break: break-word;
+        transition: opacity 0.3s;
+      }
+      .flash-message.notice {
+        background: linear-gradient(90deg, #1a1a1a 0%, #2d2d2d 100%);
+        color: #fff;
+      }
+      .flash-message.alert, .flash-message.error {
+        background: linear-gradient(90deg, #e10600 0%, #ff4444 100%);
+        color: #fff;
+      }
+      @keyframes flash-in {
+        from { opacity: 0; transform: translateY(-20px) scale(0.95); }
+        to   { opacity: 0.97; transform: translateY(0) scale(1); }
+      }
+      @media (max-width: 600px) {
+        #flash-container {
+          top: 60px;
+          right: 8px;
+          min-width: 160px;
+        }
+        .flash-message {
+          padding: 0.7rem 1.2rem;
+          font-size: 0.95rem;
+          min-width: 120px;
+          max-width: 90vw;
+        }
+      }
+    </style>
+    <script>
+      // Auto-hide flash messages after 4 seconds
+      setTimeout(function() {
+        document.querySelectorAll('.flash-message').forEach(function(el) {
+          el.style.opacity = '0';
+          setTimeout(function() { el.remove(); }, 400);
+        });
+      }, 4000);
+    </script>
+  </body>
+</html>

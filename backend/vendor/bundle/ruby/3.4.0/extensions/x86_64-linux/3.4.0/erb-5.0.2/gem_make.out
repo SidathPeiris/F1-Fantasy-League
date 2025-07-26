@@ -1,0 +1,19 @@
+current directory: /home/rumorz/Coding Projects/Ruby On Rails/F1 Fantasy Website/vendor/bundle/ruby/3.4.0/gems/erb-5.0.2/ext/erb/escape
+/usr/bin/ruby extconf.rb
+checking for rb_ext_ractor_safe() in ruby.h... yes
+creating Makefile
+
+current directory: /home/rumorz/Coding Projects/Ruby On Rails/F1 Fantasy Website/vendor/bundle/ruby/3.4.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250727-6488-xcaooz sitelibdir\=./.gem.20250727-6488-xcaooz clean
+
+current directory: /home/rumorz/Coding Projects/Ruby On Rails/F1 Fantasy Website/vendor/bundle/ruby/3.4.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250727-6488-xcaooz sitelibdir\=./.gem.20250727-6488-xcaooz
+compiling escape.c
+linking shared-object erb/escape.so
+
+current directory: /home/rumorz/Coding Projects/Ruby On Rails/F1 Fantasy Website/vendor/bundle/ruby/3.4.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250727-6488-xcaooz sitelibdir\=./.gem.20250727-6488-xcaooz install
+/usr/bin/install -c -m 0755 escape.so ./.gem.20250727-6488-xcaooz/erb
+
+current directory: /home/rumorz/Coding Projects/Ruby On Rails/F1 Fantasy Website/vendor/bundle/ruby/3.4.0/gems/erb-5.0.2/ext/erb/escape
+make DESTDIR\= sitearchdir\=./.gem.20250727-6488-xcaooz sitelibdir\=./.gem.20250727-6488-xcaooz clean

@@ -1,0 +1,22 @@
+current directory: /home/rumorz/Coding Projects/Ruby On Rails/F1 Fantasy Website/vendor/bundle/ruby/3.4.0/gems/bcrypt_pbkdf-1.1.1/ext/mri
+/usr/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/rumorz/Coding Projects/Ruby On Rails/F1 Fantasy Website/vendor/bundle/ruby/3.4.0/gems/bcrypt_pbkdf-1.1.1/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20250727-6488-v28z1r sitelibdir\=./.gem.20250727-6488-v28z1r clean
+
+current directory: /home/rumorz/Coding Projects/Ruby On Rails/F1 Fantasy Website/vendor/bundle/ruby/3.4.0/gems/bcrypt_pbkdf-1.1.1/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20250727-6488-v28z1r sitelibdir\=./.gem.20250727-6488-v28z1r
+compiling bcrypt_pbkdf.c
+compiling bcrypt_pbkdf_ext.c
+compiling blowfish.c
+compiling explicit_bzero.c
+compiling hash_sha512.c
+linking shared-object bcrypt_pbkdf_ext.so
+
+current directory: /home/rumorz/Coding Projects/Ruby On Rails/F1 Fantasy Website/vendor/bundle/ruby/3.4.0/gems/bcrypt_pbkdf-1.1.1/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20250727-6488-v28z1r sitelibdir\=./.gem.20250727-6488-v28z1r install
+/usr/bin/install -c -m 0755 bcrypt_pbkdf_ext.so ./.gem.20250727-6488-v28z1r
+
+current directory: /home/rumorz/Coding Projects/Ruby On Rails/F1 Fantasy Website/vendor/bundle/ruby/3.4.0/gems/bcrypt_pbkdf-1.1.1/ext/mri
+make DESTDIR\= sitearchdir\=./.gem.20250727-6488-v28z1r sitelibdir\=./.gem.20250727-6488-v28z1r clean
