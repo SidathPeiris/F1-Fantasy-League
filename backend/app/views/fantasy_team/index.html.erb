@@ -3,37 +3,29 @@
     <h1 class="main-title f1-red" style="margin-bottom: 0.5rem;">Build Your Fantasy Team</h1>
     <p class="hero-subtitle" style="margin-bottom: 2.5rem; color: #fff;">Select your dream Formula 1 lineup! (Feature coming soon)</p>
     <div style="width: 100%; min-height: 200px; background: rgba(255,255,255,0.03); border: 2px dashed #e10600; border-radius: 16px; display: flex; align-items: flex-start; justify-content: center; color: #e10600; font-size: 1.3rem; font-weight: 600; padding: 2rem 0;">
-      <div style="display: flex; width: 100%; max-width: 700px; justify-content: space-between; gap: 2rem;">
-        <div style="flex: 1;">
-          <ul style="list-style: none; padding: 0; color: #fff;">
-            <li style="margin-bottom: 1.1rem; font-weight: bold; color: #e10600;">Left Side</li>
-            <li>1. Max Verstappen (Red Bull)</li>
-            <li>2. Sergio Perez (Red Bull)</li>
-            <li>3. Lewis Hamilton (Mercedes)</li>
-            <li>4. George Russell (Mercedes)</li>
-            <li>5. Charles Leclerc (Ferrari)</li>
-            <li>6. Carlos Sainz Jr. (Ferrari)</li>
-            <li>7. Lando Norris (McLaren)</li>
-            <li>8. Oscar Piastri (McLaren)</li>
-            <li>9. Fernando Alonso (Aston Martin)</li>
-            <li>10. Lance Stroll (Aston Martin)</li>
-          </ul>
-        </div>
-        <div style="flex: 1;">
-          <ul style="list-style: none; padding: 0; color: #fff;">
-            <li style="margin-bottom: 1.1rem; font-weight: bold; color: #e10600;">Right Side</li>
-            <li>11. Esteban Ocon (Alpine)</li>
-            <li>12. Pierre Gasly (Alpine)</li>
-            <li>13. Alexander Albon (Williams)</li>
-            <li>14. Logan Sargeant (Williams)</li>
-            <li>15. Yuki Tsunoda (RB)</li>
-            <li>16. Daniel Ricciardo (RB)</li>
-            <li>17. Valtteri Bottas (Sauber)</li>
-            <li>18. Zhou Guanyu (Sauber)</li>
-            <li>19. Kevin Magnussen (Haas)</li>
-            <li>20. Nico Hulkenberg (Haas)</li>
-          </ul>
-        </div>
+      <% columns = @drivers.each_slice((@drivers.size/4.0).ceil).to_a %>
+      <div style="display: flex; width: 100%; max-width: 1000px; justify-content: space-between; gap: 2rem;">
+        <% columns.each do |column| %>
+          <div style="flex: 1; min-width: 0;">
+            <ul style="list-style: none; padding: 0; color: #fff;">
+              <% column.each do |driver| %>
+                <li style="display: flex; align-items: center; margin-bottom: 1.1rem; background: rgba(255,255,255,0.04); border-radius: 12px; padding: 0.5rem 0.7rem; border-left: 4px solid #<%= driver[:team_colour] || 'e10600' %>;">
+                  <% if driver[:headshot_url].present? %>
+                    <img src="<%= driver[:headshot_url] %>" alt="<%= driver[:name] %>" style="width: 64px; height: 64px; border-radius: 50%; margin-right: 0.9rem; border: 2px solid #<%= driver[:team_colour] || 'e10600' %>; background: #fff; object-fit: cover;" />
+                  <% end %>
+                  <div>
+                    <span style="font-weight: bold; color: #fff; font-size: 1.08rem;">
+                      #<%= driver[:number] %> <%= driver[:name] %>
+                    </span><br/>
+                    <span style="font-size: 0.98rem; color: #<%= driver[:team_colour] || 'e10600' %>; font-weight: 500;">
+                      <%= driver[:team] %>
+                    </span>
+                  </div>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
       </div>
     </div>
   </div>

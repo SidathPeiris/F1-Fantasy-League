@@ -1,0 +1,22 @@
+F1_DRIVERS_2025 = [
+  { number: 1, name: "Max Verstappen", team: "Red Bull Racing", team_colour: "3671C6", headshot_url: "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/drivers/2025Drivers/verstappen.jpg" },
+  { number: 22, name: "Yuki Tsunoda", team: "Red Bull Racing", team_colour: "3671C6", headshot_url: "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/drivers/2025Drivers/tsunoda.jpg" },
+  { number: 4, name: "Lando Norris", team: "McLaren", team_colour: "FF8700", headshot_url: "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/drivers/2025Drivers/norris.jpg" },
+  { number: 81, name: "Oscar Piastri", team: "McLaren", team_colour: "FF8700", headshot_url: "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/drivers/2025Drivers/piastri.jpg" },
+  { number: 16, name: "Charles Leclerc", team: "Ferrari", team_colour: "F91536", headshot_url: "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/drivers/2025Drivers/leclerc.jpg" },
+  { number: 44, name: "Lewis Hamilton", team: "Ferrari", team_colour: "F91536", headshot_url: "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/drivers/2025Drivers/hamilton.jpg" },
+  { number: 63, name: "George Russell", team: "Mercedes", team_colour: "6CD3BF", headshot_url: "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/drivers/2025Drivers/russell.jpg" },
+  { number: 8, name: "Kimi Antonelli", team: "Mercedes", team_colour: "6CD3BF", headshot_url: "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/drivers/2025Drivers/antonelli.jpg" },
+  { number: 14, name: "Fernando Alonso", team: "Aston Martin", team_colour: "006F62", headshot_url: "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/drivers/2025Drivers/alonso.jpg" },
+  { number: 18, name: "Lance Stroll", team: "Aston Martin", team_colour: "006F62", headshot_url: "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/drivers/2025Drivers/stroll.jpg" },
+  { number: 10, name: "Pierre Gasly", team: "Alpine", team_colour: "0090FF", headshot_url: "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/drivers/2025Drivers/gasly.jpg" },
+  { number: 27, name: "Franco Colapinto", team: "Alpine", team_colour: "0090FF", headshot_url: "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/drivers/2025Drivers/colapinto.jpg" },
+  { number: 23, name: "Alexander Albon", team: "Williams", team_colour: "37BEDD", headshot_url: "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/drivers/2025Drivers/albon.jpg" },
+  { number: 55, name: "Carlos Sainz", team: "Williams", team_colour: "37BEDD", headshot_url: "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/drivers/2025Drivers/sainz.jpg" },
+  { number: 27, name: "Nico Hulkenberg", team: "Kick Sauber", team_colour: "52E252", headshot_url: "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/drivers/2025Drivers/hulkenberg.jpg" },
+  { number: 24, name: "Gabriel Bortoleto", team: "Kick Sauber", team_colour: "52E252", headshot_url: "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/drivers/2025Drivers/bortoleto.jpg" },
+  { number: 40, name: "Liam Lawson", team: "Racing Bulls", team_colour: "5E8FAA", headshot_url: "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/drivers/2025Drivers/lawson.jpg" },
+  { number: 30, name: "Isack Hadjar", team: "Racing Bulls", team_colour: "5E8FAA", headshot_url: "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/drivers/2025Drivers/hadjar.jpg" },
+  { number: 31, name: "Esteban Ocon", team: "Haas F1 Team", team_colour: "B6BABD", headshot_url: "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/drivers/2025Drivers/ocon.jpg" },
+  { number: 87, name: "Oliver Bearman", team: "Haas F1 Team", team_colour: "B6BABD", headshot_url: "https://media.formula1.com/image/upload/f_auto/q_auto/v1677245035/content/dam/fom-website/drivers/2025Drivers/bearman.jpg" }
+] 
