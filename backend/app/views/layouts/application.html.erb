@@ -27,10 +27,14 @@
   <body>
     <nav class="navbar">
       <div class="navbar-container">
-        <a href="/" class="navbar-brand">F1 Fantasy League</a>
-        <div class="navbar-links">
+        <div class="navbar-left">
+          <a href="/" class="navbar-brand">F1 Fantasy League</a>
           <% if user_signed_in? %>
             <a href="/fantasy_team" class="user-bubble">Fantasy Team</a>
+          <% end %>
+        </div>
+        <div class="navbar-links">
+          <% if user_signed_in? %>
             <span class="user-bubble"><%= current_user.username.titleize %></span>
             <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-secondary', form: { style: 'display:inline' } %>
           <% else %>
@@ -67,6 +71,11 @@
         justify-content: space-between;
         padding: 0 24px;
       }
+      .navbar-left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
       .navbar-brand {
         font-size: 1.5rem;
         font-weight: bold;
@@ -94,7 +103,7 @@
         font-weight: 600;
         font-size: 1rem;
         box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        border: 2px solid #e10600;
+        border: 2px solid #ffffff;
         vertical-align: middle;
         letter-spacing: 0.5px;
       }
@@ -102,6 +111,11 @@
         .navbar-container {
           flex-direction: column;
           align-items: flex-start;
+        }
+        .navbar-left {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.5rem;
         }
         .navbar-links {
           margin-top: 0.5rem;
